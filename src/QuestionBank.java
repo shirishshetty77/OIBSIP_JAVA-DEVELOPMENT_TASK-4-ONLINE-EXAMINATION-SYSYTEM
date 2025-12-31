@@ -6,7 +6,7 @@ public class QuestionBank {
 
     static {
 
-        // ================== JAVA BASICS (1–40) ==================
+       
         allQuestions.add(new Question("Which keyword is used to inherit a class?",
                 new String[]{"this", "super", "extends", "implements"}, 2));
         allQuestions.add(new Question("Default value of int variable?",
@@ -27,17 +27,6 @@ public class QuestionBank {
                 new String[]{"==", "equals()", "!=", "compareTo()"}, 0));
         allQuestions.add(new Question("Which class is root of all classes?",
                 new String[]{"Object", "System", "Class", "Base"}, 0));
-
-        // 11–40
-        for (int i = 11; i <= 40; i++) {
-            allQuestions.add(new Question(
-                    "Java basic question #" + i,
-                    new String[]{"Option A", "Option B", "Option C", "Option D"},
-                    i % 4
-            ));
-        }
-
-        // ================== OOP (41–80) ==================
         allQuestions.add(new Question("Which supports multiple inheritance?",
                 new String[]{"Class", "Interface", "Abstract class", "Object"}, 1));
         allQuestions.add(new Question("Which keyword refers to current object?",
@@ -48,16 +37,6 @@ public class QuestionBank {
                 new String[]{"this()", "parent()", "super()", "base()"}, 2));
         allQuestions.add(new Question("Which OOP principle hides data?",
                 new String[]{"Inheritance", "Polymorphism", "Encapsulation", "Abstraction"}, 2));
-
-        for (int i = 46; i <= 80; i++) {
-            allQuestions.add(new Question(
-                    "OOP question #" + i,
-                    new String[]{"Encapsulation", "Inheritance", "Polymorphism", "Abstraction"},
-                    i % 4
-            ));
-        }
-
-        // ================== COLLECTIONS (81–120) ==================
         allQuestions.add(new Question("Which allows duplicate elements?",
                 new String[]{"Set", "Map", "List", "Queue"}, 2));
         allQuestions.add(new Question("Which is synchronized?",
@@ -68,16 +47,6 @@ public class QuestionBank {
                 new String[]{"List", "Set", "Map", "Queue"}, 2));
         allQuestions.add(new Question("Which allows null key?",
                 new String[]{"TreeMap", "Hashtable", "HashMap", "ConcurrentHashMap"}, 2));
-
-        for (int i = 86; i <= 120; i++) {
-            allQuestions.add(new Question(
-                    "Collection question #" + i,
-                    new String[]{"List", "Set", "Map", "Queue"},
-                    i % 4
-            ));
-        }
-
-        // ================== EXCEPTIONS & THREADS (121–160) ==================
         allQuestions.add(new Question("Which is checked exception?",
                 new String[]{"IOException", "NullPointerException", "ArithmeticException", "ClassCastException"}, 0));
         allQuestions.add(new Question("Which keyword handles exception?",
@@ -88,16 +57,6 @@ public class QuestionBank {
                 new String[]{"sleep()", "wait()", "stop()", "yield()"}, 0));
         allQuestions.add(new Question("Which exception is unchecked?",
                 new String[]{"IOException", "SQLException", "NullPointerException", "ClassNotFoundException"}, 2));
-
-        for (int i = 126; i <= 160; i++) {
-            allQuestions.add(new Question(
-                    "Thread/Exception question #" + i,
-                    new String[]{"Option A", "Option B", "Option C", "Option D"},
-                    i % 4
-            ));
-        }
-
-        // ================== SWING, JVM, IO (161–200) ==================
         allQuestions.add(new Question("Swing package is?",
                 new String[]{"java.awt", "javax.swing", "java.util", "java.io"}, 1));
         allQuestions.add(new Question("Which component allows single selection?",
@@ -109,18 +68,12 @@ public class QuestionBank {
         allQuestions.add(new Question("Garbage collection frees?",
                 new String[]{"Memory", "Threads", "Files", "CPU"}, 0));
 
-        for (int i = 166; i <= 200; i++) {
-            allQuestions.add(new Question(
-                    "Advanced Java question #" + i,
-                    new String[]{"Option A", "Option B", "Option C", "Option D"},
-                    i % 4
-            ));
-        }
+     
     }
 
     public static List<Question> getExamQuestions() {
         List<Question> copy = new ArrayList<>(allQuestions);
         Collections.shuffle(copy);
-        return copy.subList(0, 50);
+        return copy.subList(0, 20);
     }
 }

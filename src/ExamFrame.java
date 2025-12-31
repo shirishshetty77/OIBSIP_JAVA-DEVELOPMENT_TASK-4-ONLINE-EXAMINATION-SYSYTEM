@@ -11,7 +11,7 @@ public class ExamFrame extends JFrame {
     private final Integer[] selectedIndices;
 
     private int current = 0;
-    private int timeLeftSeconds = 30 * 60; // 30 minutes
+    private int timeLeftSeconds = 10 * 60; // 10 minutes
     private Timer timer;
 
     private JLabel timerLabel;
